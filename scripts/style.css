@@ -44,7 +44,8 @@ a:hover {
 .content-wrapper {
     margin-left: 20px;
     margin-right: 20px;
-    height: 1500px;
+    height: 1.4vh;
+    width: 1vwc;
 }
 
 .nav-menu {
