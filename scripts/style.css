@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    background-color: black;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+li {
+    letter-spacing: 2px;
+}
+
+a:link, a:visited, a:active { 
+  text-decoration: none; 
+  color: #323232;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.logo:hover {
+    background: #0B9EFF;
+    background: linear-gradient(to bottom right, #0B9EFF 0%, #E8B1FF 65%);
+    background-clip:content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-li {
+    letter-spacing: normal;
+    line-height: 2.5em;
+}
+
+.content-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 1500px;
+}
+
+.nav-menu {
+    float: left;
+    position: sticky;
+    top: 20px;
+    margin-right: 20px;
+    font-family: noto-sans;
+    color: #323232;
+}
+
+.content {
+    float: right;
+    color: white;
+    width: 500px;
+    font-family: noto-sans;
+    text-wrap-mode: wrap;
+    text-wrap: balance;
+    line-height: 1.5em;
+}
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
