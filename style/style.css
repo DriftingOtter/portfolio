@@ -42,30 +42,26 @@ a:hover {
 }
 
 .content-wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 1.4vh;
-    width: 1vwc;
+    display: flex;
+    margin-left:  10%;
+    margin-right: 10%;
+    margin-top:    5%;
 }
 
 .nav-menu {
-    float: left;
-    position: sticky;
-    top: 20px;
     margin-right: 20px;
     font-family: noto-sans;
     color: #323232;
 }
 
 .content {
-    float: right;
+    flex: 1;
     color: white;
-    width: 500px;
     font-family: noto-sans;
-    text-wrap-mode: wrap;
-    text-wrap: balance;
-    line-height: 1.5em;
+    line-height: 2em;
+    height: 100vh; 
 }
+
 
 .noto-sans {
   font-family: "Noto Sans", sans-serif;

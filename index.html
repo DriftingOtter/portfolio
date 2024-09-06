@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="scripts/style.css">
+    <link rel="stylesheet" media="only screen and (max-width: 2000px)" href="style/style.css" />
+    <link rel="stylesheet" media="only screen and (max-width: 1080px)" href="style/mobile_style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/2ad54d8774.js" crossorigin="anonymous"></script>
-
 
     <title>Daksh Kaul</title>
   </head>
@@ -23,18 +23,21 @@
 
       <!-- nav menu -->
       <div class="nav-menu">
-          <h1 class="logo">Dk.</h1>
+          <h1 class="logo" id="menu-toggle">Dk.</h1>
           <hr>
-          <h2><a href="#intro">intro.</a></h2>
-          <h2><a href="#ethos">ethos.</a></h2>
-          <h2><a href="#skills">skills.</a></h2>
-          <h2><a href="#education">education.</a></h2>
-          <h2><a href="#accomplishments">accomplishments.</a></h2>
-          <hr>
-          <h2><a href="#contact">contact info.</a></h2>
+          <div id="menu-content">
+              <h2><a href="#intro">intro.</a></h2>
+              <h2><a href="#ethos">ethos.</a></h2>
+              <h2><a href="#skills">skills.</a></h2>
+              <h2><a href="#education">education.</a></h2>
+              <h2><a href="#accomplishments">accomplishments.</a></h2>
+              <hr>
+              <h2><a href="#contact">contact info.</a></h2>
+          </div>
       </div>
+      <script src="scripts/fold_out_menu.js"></script>
 
-      <!-- content menu -->
+      <!-- content -->
       <div class="content">
 
           <h2><i>Hello~</i></h2> 
