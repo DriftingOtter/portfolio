@@ -36,11 +36,6 @@ a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.contact-li {
-    letter-spacing: normal;
-    line-height: 2.5em;
-}
-
 .content-wrapper {
     display: flex;
     margin-left:  10%;
@@ -59,9 +54,49 @@ a:hover {
     color: white;
     font-family: noto-sans;
     line-height: 2em;
-    height: 100vh; 
+    height: 100vh;
 }
 
+.project-list {
+    margin-left:   5%;
+    margin-right:  5%;
+    text-align: justify;
+}
+
+.button {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1em;
+  background-color: #323232;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.contact-button {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1em;
+  background-color: #323232;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+  margin-bottom: 2%;
+  margin-left: 3%;
+}
+
+.contact-button:hover {
+  background-color: white;
+  color: black;
+}
 
 .noto-sans {
   font-family: "Noto Sans", sans-serif;

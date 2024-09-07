@@ -16,3 +16,8 @@
     margin-right: 5%;
     margin-left: 5%;
 }
+
+.contact-button {
+    width: 100%;
+    margin-left: unset;
+}
