@@ -14,9 +14,6 @@ body {
 
 }
 
-li {
-    letter-spacing: 2px;
-}
 
 a:link, a:visited, a:active { 
   text-decoration: none; 
@@ -107,4 +104,6 @@ a:hover {
     "wdth" 100;
 }
 
-
+.intro {
+    font-size: 4vw;
+}
