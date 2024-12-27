@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  cursor: default;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+:focus {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+}
+
+a:focus {
+  text-decoration: underline;
+}
+
+@keyframes gentleFlash {
+  0%, 100% {
+    background-color: transparent;
+    color: white;
+  }
+  50% {
+    background-color: white;
+    color: black;
+  }
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  animation: gentleFlash 2s infinite;
+}
+

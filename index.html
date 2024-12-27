@@ -1,143 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daksh Kaul - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li::before {
+            content: ">";
+            margin-right: 10px;
+            color: #0f0;
+        }
+        .project {
+            background-color: #111;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #0f0;
+            cursor: pointer;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project-details {
+            display: none;
+            padding-top: 10px;
+        }
+        .project-details.show {
+            display: block;
+        }
+        .skill-bar {
+            background-color: #333;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        .skill-progress {
+            background-color: #0f0;
+            height: 100%;
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+        nav li {
+            list-style-type: none;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daksh Kaul</h1>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#accomplishments">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p id="intro-text"></p>
+            <p>I believe that the beauty code is often in its simplicity. I believe that if an application/service/website can deliver its information to the user in the fastest and simplest way possible, without any 'fuzz' or 'fluff' that may make the spreading of information harder or long-winded, it's truly a wonderful creation.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>To boast these principles, I honed my skills in the following programming languages, distribution, and version control systems:</p>
+            <ul>
+                <li>
+                    Python
+                    <div class="skill-bar"><div class="skill-progress" data-progress="90%"></div></div>
+                </li>
+                <li>
+                    C/C++
+                    <div class="skill-bar"><div class="skill-progress" data-progress="80%"></div></div>
+                </li>
+                <li>
+                    Rust
+                    <div class="skill-bar"><div class="skill-progress" data-progress="75%"></div></div>
+                </li>
+                <li>
+                    SQL
+                    <div class="skill-bar"><div class="skill-progress" data-progress="85%"></div></div>
+                </li>
+                <li>
+                    HTML/CSS/JS
+                    <div class="skill-bar"><div class="skill-progress" data-progress="70%"></div></div>
+                </li>
+                <li>
+                    Git/Github
+                    <div class="skill-bar"><div class="skill-progress" data-progress="95%"></div></div>
+                </li>
+                <li>
+                    Word/Powerpoint/Excel
+                    <div class="skill-bar"><div class="skill-progress" data-progress="80%"></div></div>
+                </li>
+                <li>
+                    Linux: OpenSUSE TW, Arch, Ubuntu
+                    <div class="skill-bar"><div class="skill-progress" data-progress="90%"></div></div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <p>Not only have I burnt the midnight oil in my chosen field of expertise, but I have also concurrently worked hard to cultivate my knowledge of the greater academia.</p>
+            <p>During my stay in high school within the IB (International Baccalaureate) program I studied:</p>
+            <ul>
+                <li>Physics</li>
+                <li>Statistics</li>
+                <li>English Composition</li>
+                <li>Spanish</li>
+                <li>Computer Science</li>
+                <li>Digital Humanities (Digital Society)</li>
+            </ul>
+        </section>
+        
+        <section id="accomplishments">
+            <h2>Accomplishments</h2>
+            <p>With this combined knowledge, I have developed many personal projects that display my equippedness for many 'small-scale' projects and 'full stack' applications that can scale to large quantities of user bases.</p>
+            
+            <div class="project">
+                <h3>smplfetch</h3>
+                <div class="project-details">
+                    <p>A straightforward system info fetch script for Linux includes commonly used information for the user to display for debugging or 'aesthetic' purposes.</p>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h3>brsk</h3>
+                <div class="project-details">
+                    <p>brsk (pronounced brisk) is a Linux shell written in Rust. This is my current personal project, but it is still in the heavy alpha stages. Some final features will be command parsing and execution, IO redirection, parallel processing, environment management, command substitution, scripting capabilities - utilizing a hand-rolled shell scripting language - and 'plugin extensibility.'</p>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h3>ShowMyKeys</h3>
+                <div class="project-details">
+                    <p>A keyboard visualizer/emulation software can be utilized to display keyboard combinations.</p>
+                </div>
+            </div>
+            
+            <div class="project">
+                <h3>Typr</h3>
+                <div class="project-details">
+                    <p>Typr is an interactive touch typing learning application designed to improve your typing skills and prevent RSI (Repetitive Strain Injury) by incrementally teaching each 'layer' of the keyboard via 'bite-sized' lessons to build mastery of the standard keyboard QWERTY layout.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <link rel="stylesheet" media="only screen and (max-width: 2000px)" href="style/style.css" />
-    <link rel="stylesheet" media="only screen and (max-width: 1080px)" href="style/mobile_style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/2ad54d8774.js" crossorigin="anonymous"></script>
-
-    <title>Daksh Kaul</title>
-  </head>
-
-  <body>
-
-  <div class="content-wrapper">
-
-      <!-- nav menu -->
-      <div class="nav-menu">
-          <h1 class="logo" id="menu-toggle">Dk.</h1>
-          <hr>
-          <div id="menu-content">
-              <h2><a href="#intro">Intro.</a></h2>
-              <h2><a href="#skills">Skills.</a></h2>
-              <h2><a href="#education">Education.</a></h2>
-              <h2><a href="#accomplishments">Accomplishments.</a></h2>
-
-              <hr>
-              <br>
-
-              <div>
-                  <button class="contact-button" id="mail-btn">
-                      <i class="fa-solid fa-envelope fa-xl"></i>
-                  </button>
-
-                  <button class="contact-button" id="linkedin-btn">
-                      <i class="fa-brands fa-linkedin fa-xl"></i>
-                  </button>
-
-                  <button class="contact-button" id="github-btn">
-                      <i class="fa-brands fa-square-github fa-xl"></i>
-                  </button>
-              </div> 
-              <script src="scripts/contact_buttons.js"></script>
-
-          </div>
-      </div>
-      <script src="scripts/fold_out_menu.js"></script>
-
-      <!-- content -->
-      <div class="content">
-
-          <h1 class="intro" id="intro"><i>Greetings, welcome to my page.</i></h1> 
-
-          <p>
-          My name is Daksh Kaul, and I am an aspiring <b>software developer/writer/musician</b> specializing in back-end development.
-          </p>
-
-          <p>
-          
-          I believe that the beauty code is often in its simplicity. 
-
-          I believe that if an application/service/website can deliver its information to the user in the fastest and simplest way possible, without any 'fuzz' or 'fluff' that may make the spreading of information harder or long-winded, it's truly a wonderful creation.
-          </p>
-
-          <h2 id="skills">Skills.</h2>
-          <hr>
-
-          <p>
-          To boast these principles, I honed my skills in the following programming languages, distribution, and version control systems:
-          </p>
-
-          <ul>
-              <li> Python       </li>
-              <li> C/C++        </li>
-              <li> Rust         </li>
-              <li> SQL          </li>
-              <li> HTML/CSS/JS* </li>
-          <hr>
-              <li> Git/Github                       </li> 
-              <li> Word/Powerpoint/Excel            </li>
-              <li> Linux: OpenSUSE TW, Arch, Ubuntu </li>
-          </ul>
-
-          <h2 id="education">Education.</h2>
-          <hr>
-
-          <p>
-          Not only have I burnt the midnight oil in my chosen field of expertise, but I have also concurrently worked hard to cultivate my knowledge of the greater academia.
-          </p>
-
-          <p>
-          During my stay in high school within the IB (International Baccalaureate) program I studied:
-          </p>
-
-          <ul>
-              <li> Physics             </li>
-              <li> Statisics           </li>
-              <li> English Composition </li>
-              <li> Spanish             </li>
-              <li> Computer Science    </li>
-              <li> Digital Humanities (Digital Society) </li>
-          </ul>
-
-          <h2 id="accomplishments">Accomplishments.</h2>
-          <hr>
-
-          <p>
-          With this combined knowledge, I have developed many personal projects that display my equippedness for many 'small-scale' projects and 'full stack' applications that can scale to large quantities of user bases.
-          </p>
-
-          <div class="project-list">
-              <h3><a href="https://github.com/DriftingOtter/smplFetch">smplfetch <i class="fa-solid fa-paperclip"></i></a></h3>
-              <hr>
-              A straightforward system info fetch script for Linux includes commonly used information for the user to display for debugging or 'aesthetic' purposes.
-
-              <h3><a href="https://github.com/DriftingOtter/brsk-shell">brsk <i class="fa-solid fa-paperclip"></i></a></h3>
-              <hr>
-              brsk (pronounced brisk) is a Linux shell written in Rust. This is my current personal project, but it is still in the heavy alpha stages. Some final features will be command parsing and execution, IO redirection, parallel processing, environment management, command substitution, scripting capabilities - utilizing a hand-rolled shell scripting language - and 'plugin extensibility.'
-              
-              <h3><a href="https://github.com/DriftingOtter/ShowMyKeys">ShowMyKeys <i class="fa-solid fa-paperclip"></i></a></h3>
-              <hr>
-              A keyboard visualizer/emulation software can be utilized to display keyboard combinations.
-
-              <h3><a href="https://github.com/DriftingOtter/Typr.GUI">Typr <i class="fa-solid fa-paperclip"></i></a></h3>
-              <hr>
-              Typr is an interactive touch typing learning application designed to improve your typing skills and prevent RSI (Repetitive Strain Injury) by incrementally teaching each 'layer' of the keyboard via 'bite-sized' lessons to build mastery of the standard keyboard QWERTY layout.
-
-          </div>
-
-      </div>
-
-  </div>
-  </body>
-
+    <script src="script.js"></script>
+</body>
 </html>
 
