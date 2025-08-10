@@ -7,16 +7,17 @@ node_modules/
 
 # Build output
 # ---------------------------------
-# Ignore the default build output directory for Tailwind CSS or other build tools.
-dist/
-build/
-public/build/
-out/
+# For GitHub Pages, we NEED to commit the final build output.
+# I have commented out the lines that would ignore these files.
+# If your output folder has a different name, comment that out instead.
+# dist/
+# build/
+# public/build/
+# out/
 
 # If you have a specific output file for your compiled CSS.
 # Adjust the path if your output file is located elsewhere.
-/src/styles/tailwind.css
-/output.css
+# /output.css
 
 # Logs
 # ---------------------------------
