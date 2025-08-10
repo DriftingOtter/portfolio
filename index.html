@@ -1,207 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daksh Kaul - Portfolio</title>
+    <title>Daksh Kaul - Developer & Researcher</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="./output.css" rel="stylesheet">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 1s ease-in-out',
+                    }
+                }
+            },
+            // This enables dark mode based on the user's OS preference
+            darkMode: 'media', 
+        }
+    </script>
+    
     <style>
+        /* A simple fallback background color */
         body {
-            font-family: 'Courier New', monospace;
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            border-bottom: 2px solid #fff;
-            padding-bottom: 10px;
-        }
-        h1 {
-            font-size: 3em;
-            text-align: center;
-        }
-        section {
-            margin-bottom: 40px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-        .visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li::before {
-            content: ">";
-            margin-right: 10px;
-            color: #0f0;
-        }
-        .project {
-            background-color: #111;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-left: 5px solid #0f0;
-            cursor: pointer;
-        }
-        .project h3 {
-            margin-top: 0;
-        }
-        .project-details {
-            display: none;
-            padding-top: 10px;
-        }
-        .project-details.show {
-            display: block;
-        }
-        .skill-bar {
-            background-color: #333;
-            height: 20px;
-            margin-bottom: 10px;
-        }
-        .skill-progress {
-            background-color: #0f0;
-            height: 100%;
-            width: 0;
-            transition: width 1s ease-in-out;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        nav ul {
-            display: flex;
-            justify-content: space-around;
-            padding: 0;
-        }
-        nav li {
-            list-style-type: none;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #0f0;
+            background-color: #0f172a;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Daksh Kaul</h1>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#accomplishments">Projects</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <section id="intro">
-            <h2>Introduction</h2>
-            <p id="intro-text"></p>
-            <p>I believe that the beauty code is often in its simplicity. I believe that if an application/service/website can deliver its information to the user in the fastest and simplest way possible, without any 'fuzz' or 'fluff' that may make the spreading of information harder or long-winded, it's truly a wonderful creation.</p>
-        </section>
-        
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>To boast these principles, I honed my skills in the following programming languages, distribution, and version control systems:</p>
-            <ul>
-                <li>
-                    Python
-                    <div class="skill-bar"><div class="skill-progress" data-progress="90%"></div></div>
-                </li>
-                <li>
-                    C/C++
-                    <div class="skill-bar"><div class="skill-progress" data-progress="80%"></div></div>
-                </li>
-                <li>
-                    Rust
-                    <div class="skill-bar"><div class="skill-progress" data-progress="75%"></div></div>
-                </li>
-                <li>
-                    SQL
-                    <div class="skill-bar"><div class="skill-progress" data-progress="85%"></div></div>
-                </li>
-                <li>
-                    HTML/CSS/JS
-                    <div class="skill-bar"><div class="skill-progress" data-progress="70%"></div></div>
-                </li>
-                <li>
-                    Git/Github
-                    <div class="skill-bar"><div class="skill-progress" data-progress="95%"></div></div>
-                </li>
-                <li>
-                    Word/Powerpoint/Excel
-                    <div class="skill-bar"><div class="skill-progress" data-progress="80%"></div></div>
-                </li>
-                <li>
-                    Linux: OpenSUSE TW, Arch, Ubuntu
-                    <div class="skill-bar"><div class="skill-progress" data-progress="90%"></div></div>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="education">
-            <h2>Education</h2>
-            <p>Not only have I burnt the midnight oil in my chosen field of expertise, but I have also concurrently worked hard to cultivate my knowledge of the greater academia.</p>
-            <p>During my stay in high school within the IB (International Baccalaureate) program I studied:</p>
-            <ul>
-                <li>Physics</li>
-                <li>Statistics</li>
-                <li>English Composition</li>
-                <li>Spanish</li>
-                <li>Computer Science</li>
-                <li>Digital Humanities (Digital Society)</li>
-            </ul>
-        </section>
-        
-        <section id="accomplishments">
-            <h2>Accomplishments</h2>
-            <p>With this combined knowledge, I have developed many personal projects that display my equippedness for many 'small-scale' projects and 'full stack' applications that can scale to large quantities of user bases.</p>
-            
-            <div class="project">
-                <h3>smplfetch</h3>
-                <div class="project-details">
-                    <p>A straightforward system info fetch script for Linux includes commonly used information for the user to display for debugging or 'aesthetic' purposes.</p>
-                </div>
-            </div>
-            
-            <div class="project">
-                <h3>brsk</h3>
-                <div class="project-details">
-                    <p>brsk (pronounced brisk) is a Linux shell written in Rust. This is my current personal project, but it is still in the heavy alpha stages. Some final features will be command parsing and execution, IO redirection, parallel processing, environment management, command substitution, scripting capabilities - utilizing a hand-rolled shell scripting language - and 'plugin extensibility.'</p>
-                </div>
-            </div>
-            
-            <div class="project">
-                <h3>ShowMyKeys</h3>
-                <div class="project-details">
-                    <p>A keyboard visualizer/emulation software can be utilized to display keyboard combinations.</p>
-                </div>
-            </div>
-            
-            <div class="project">
-                <h3>Typr</h3>
-                <div class="project-details">
-                    <p>Typr is an interactive touch typing learning application designed to improve your typing skills and prevent RSI (Repetitive Strain Injury) by incrementally teaching each 'layer' of the keyboard via 'bite-sized' lessons to build mastery of the standard keyboard QWERTY layout.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-sans antialiased animate-fadeIn">
 
-    <script src="script.js"></script>
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Daksh Kaul</h1>
+            <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">Developer & Researcher</p>
+            <div class="mt-6 flex justify-center items-center gap-x-6">
+                <a href="mailto:dk1293@scarletmail.rutgers.edu" aria-label="Email Daksh Kaul" class="text-sm font-semibold leading-6 text-sky-600 dark:text-sky-400 hover:text-sky-700 dark:hover:text-sky-300 transition-colors">Email</a>
+                <div class="h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+                <a href="https://github.com/DriftingOtter" target="_blank" rel="noopener noreferrer" aria-label="Daksh Kaul's GitHub Profile" class="text-sm font-semibold leading-6 text-sky-600 dark:text-sky-400 hover:text-sky-700 dark:hover:text-sky-300 transition-colors">GitHub</a>
+                <div class="h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+                <a href="https://www.linkedin.com/in/daksh-kaul-a35213239/" target="_blank" rel="noopener noreferrer" aria-label="Daksh Kaul's LinkedIn Profile" class="text-sm font-semibold leading-6 text-sky-600 dark:text-sky-400 hover:text-sky-700 dark:hover:text-sky-300 transition-colors">LinkedIn</a>
+            </div>
+        </header>
+
+        <!-- Section Divider -->
+        <hr class="border-slate-200 dark:border-slate-800 my-12">
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12">
+
+            <!-- Left Column (Main Content) -->
+            <main class="md:col-span-2 space-y-12">
+                
+                <!-- About Me Section -->
+                <section id="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading" class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">About Me</h2>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        I am a Computer Science student at Rutgers University with a passion for software development, audio engineering, and foundational physics. My work spans from building open-source hardware and full-stack applications to independent research in quantum mechanics. I thrive on solving complex problems and enjoy creating tools that are both efficient and user-focused.
+                    </p>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">Projects</h2>
+                    <div class="space-y-8">
+                        
+                        <!-- Project Card 1 -->
+                        <article class="bg-white dark:bg-slate-800/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Persistence through Self-Reference: A Derivation of Quantum Mechanics</h3>
+                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                                An independent research paper proposing a novel framework where quantum mechanics emerges from the first principles of information conservation and self-reference.
+                            </p>
+                            <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                                <a href="https://github.com/DriftingOtter/Unified-Field-Theory-Research" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline">GitHub Repo</a>
+                                <a href="https://github.com/DriftingOtter/Unified-Field-Theory-Research/raw/main/Paper/Persistence_through_Self_Reference__A_Nonlinear_Information_Theoretic_Derivation_of_Quantum_Mechanics_Reworked.pdf" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline">Read Paper (PDF)</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Project Card 2 -->
+                        <article class="bg-white dark:bg-slate-800/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Project Resonator - Open-Source IEM</h3>
+                             <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                                A comprehensive open-source project for designing and building custom in-ear monitors (IEMs), from driver selection to 3D printed shells.
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://github.com/DriftingOtter/Project-Resonator" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline">GitHub Repo</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Project Card 3 -->
+                        <article class="bg-white dark:bg-slate-800/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">Typr - Cross-Platform Typing Tutor</h3>
+                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                                A full-stack typing tutor built with Python and Flet, featuring structured lessons and performance analytics, designed to run on any platform.
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://github.com/DriftingOtter/Typr" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline">GitHub Repo</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Project Card 4 -->
+                        <article class="bg-white dark:bg-slate-800/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <h3 class="font-semibold text-slate-900 dark:text-white">brsk - Terminal Emulator</h3>
+                            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                                A minimal, memory-safe, and highly efficient terminal emulator built from the ground up using the Rust programming language.
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://github.com/DriftingOtter/brsk-shell" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-sky-600 dark:text-sky-400 hover:underline">GitHub Repo</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Column (Sidebar) -->
+            <aside class="space-y-10">
+                
+                <!-- Skills Section -->
+                <section id="skills" aria-labelledby="skills-heading">
+                    <h2 id="skills-heading" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-sky-900 dark:text-sky-300">Python</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-emerald-900 dark:text-emerald-300">C/C++</span>
+                        <span class="bg-amber-100 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-amber-900 dark:text-amber-300">Rust</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-indigo-900 dark:text-indigo-300">SQL</span>
+                        <span class="bg-rose-100 text-rose-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-rose-900 dark:text-rose-300">HTML/CSS/JS</span>
+                        <span class="bg-slate-200 text-slate-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-slate-700 dark:text-slate-300">Git</span>
+                        <span class="bg-lime-100 text-lime-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-lime-900 dark:text-lime-300">Linux</span>
+                        <span class="bg-fuchsia-100 text-fuchsia-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-fuchsia-900 dark:text-fuchsia-300">Fusion 360</span>
+                        <span class="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-cyan-900 dark:text-cyan-300">KiCad</span>
+                        <span class="bg-violet-100 text-violet-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-violet-900 dark:text-violet-300">Ableton</span>
+                        <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-orange-900 dark:text-orange-300">DaVinci Resolve</span>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience" aria-labelledby="experience-heading">
+                    <h2 id="experience-heading" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Experience</h2>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 border-l border-slate-200 dark:border-slate-700 pl-4">
+                        <li class="transition-colors duration-300 hover:text-slate-900 dark:hover:text-white"><strong>Engineering Lead</strong>, Project Resonator</li>
+                        <li class="transition-colors duration-300 hover:text-slate-900 dark:hover:text-white"><strong>Full-Stack Developer</strong>, Typr</li>
+                        <li class="transition-colors duration-300 hover:text-slate-900 dark:hover:text-white"><strong>Back-end Developer</strong>, Clamshell</li>
+                        <li class="transition-colors duration-300 hover:text-slate-900 dark:hover:text-white"><strong>Technical Manager</strong>, Nestlé New Product Testing</li>
+                        <li class="transition-colors duration-300 hover:text-slate-900 dark:hover:text-white"><strong>Researcher</strong>, Audio Compression Algorithms</li>
+                    </ul>
+                </section>
+
+                <!-- Education Section -->
+                <section id="education" aria-labelledby="education-heading">
+                    <h2 id="education-heading" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Education</h2>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">
+                        <p class="font-semibold text-slate-700 dark:text-slate-300">Rutgers, The State University of New Jersey</p>
+                        <p>Bachelor of Science in Computer Science</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 text-sm text-slate-500 dark:text-slate-400">
+            <p>&copy; 2025 Daksh Kaul. Built with Tailwind CSS.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
 
